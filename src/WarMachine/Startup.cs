@@ -43,6 +43,9 @@ namespace WarMachine
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDbContext<ModelDbContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
