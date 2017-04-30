@@ -5,7 +5,7 @@
 
 
 
-<form asp-controller="AddModel" asp-action="Model" method="post">
+<form asp-controller="Add" asp-action="Model" method="post">
 
     <div asp-validation-summary="All"></div>
     <select asp-for="AddType" asp-items="@Model.Categories"></select>

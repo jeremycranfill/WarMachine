@@ -21,13 +21,15 @@ namespace WarMachine.Data
             modelBuilder.Entity<Spell>().HasKey(c => c.ID);
             modelBuilder.Entity<Weapon>().HasKey(c => c.ID);
             modelBuilder.Entity<UnitModel>().HasKey(c => c.ID);
+            modelBuilder.Entity<SoloModel>().HasKey(c => c.ID);
 
 
-            modelBuilder.Entity<UnitModel>().HasMany(s => s.Weapons);
-
+           modelBuilder.Entity<UnitModel>().HasMany(s => s.Weapons);
            modelBuilder.Entity<UnitModel>().HasMany(s => s.Spells);
-        
            modelBuilder.Entity<UnitModel>().HasMany(s => s.Abilities);
+
+            modelBuilder.Entity<SoloModel>().HasMany(w => w.Weapons);
+
 
 
 

@@ -1,25 +1,25 @@
-﻿@model WarMachine.ViewModels.AddUnitViewModel
+﻿@model WarMachine.ViewModels.AddSoloViewModel
 
-<form asp-controller="AddModel" asp-action="AddUnit" method="post">
+<form asp-controller="Add" asp-action="AddSolo" method="post">
 
     <div class="form-group">
         <label asp-for="SPD"></label>
         <input class="form-control" asp-for="SPD" />
         <span asp-validation-for="SPD"></span>
-        
+
     </div>
 
     <div class="form-group">
         <label asp-for="STR"></label>
         <input class="form-control" asp-for="STR" />
         <span asp-validation-for="STR"></span>
-        </div>
+    </div>
 
-        <div class="form-group">
-            <label asp-for="MAT"></label>
-            <input class="form-control" asp-for="MAT" />
-            <span asp-validation-for="MAT"></span>
-         </div>
+    <div class="form-group">
+        <label asp-for="MAT"></label>
+        <input class="form-control" asp-for="MAT" />
+        <span asp-validation-for="MAT"></span>
+    </div>
 
     <div class="form-group">
         <label asp-for="RAT"></label>
@@ -43,7 +43,7 @@
         <label asp-for="CMD"></label>
         <input class="form-control" asp-for="CMD" />
         <span asp-validation-for="CMD"></span>
-     </div>
+    </div>
 
 
 
@@ -67,23 +67,7 @@
 
     </div>
 
-
-    <div class="form-group">
-        <label asp-for="MaxUnit"></label>
-        <input class="form-control" asp-for="MaxUnit" />
-        <span asp-validation-for="MaxUnit"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="MinUnit"></label>
-        <input class="form-control" asp-for="MinUnit" />
-        <span asp-validation-for="MinUnit"></span>
-    </div>
-    
-    
-    
-    
     <input type="submit" />
-    
+
 
 </form>
